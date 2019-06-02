@@ -1,0 +1,79 @@
+<!-- <ion-header>
+    <ion-toolbar>
+      <ion-title style="align-content: center">submeat</ion-title>
+      <ion-icon name="arrow-round-back" style="zoom:2.5;" (click)="onClick()"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+   -->
+
+   <ion-header>
+      <ion-toolbar>
+          <ion-buttons start>
+              <button ion-button icon-only color="royal" (click)="onClick()">
+                <ion-icon name="arrow-round-back" ></ion-icon>
+              </button>
+            </ion-buttons>
+        <ion-buttons end>
+          <button ion-button icon-only color="royal">
+            <ion-icon name="search"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>subvegetable list</ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only color="royal">
+            <ion-icon name="cart"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+  <ion-content>
+  
+      <!-- <ion-card *ngFor="let user of meat" style="background-color: white;">
+    
+          <ion-card-header>
+            <ion-card-title>{{user.name}}</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <img src="{{user.product_img}}" />
+          </ion-card-content>
+          <button ion-button (click)="showingProduct(user)" >SHow Details</button>
+      </ion-card> -->
+
+      <img src="/assets/icon/butcher_choice_assorted_meats.jpg" />
+
+
+
+      <ion-grid>
+          <ion-row >
+            <ion-col *ngFor="let user of meat" col-6 style="background-color: white;">
+                <ion-card>
+    
+                    <!-- <ion-card-header>
+                      <ion-card-title>{{user.name}}</ion-card-title>
+                    </ion-card-header> -->
+                  
+                    <!-- <ion-card-content> 
+                    <img (click)="showingProduct(user)"  src="{{user.product_img}}" />
+                    </ion-card-content> -->
+                    <!-- <button ion-button (click)="showingProduct(user)" >SHow Details</button> -->
+                    <img (click)="showingProduct(user)"  src="{{user.product_img}}" />
+                </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  
+  </ion-content>
+
+  <ion-footer style="background: #f53d3d">
+      <ion-toolbar color="danger" >
+          <ion-buttons >
+              <button ion-button style="margin-left: 25%;color: white">
+                sort
+              </button>
+              <button ion-button style="margin-left: 25%;color: white">
+                  Filter
+              </button>
+            </ion-buttons>
+        </ion-toolbar>
+      </ion-footer>

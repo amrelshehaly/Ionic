@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button icon-only color="royal" (click)="Goback()">
+              <ion-icon name="arrow-round-back" ></ion-icon>
+            </button>
+          </ion-buttons>
+      <ion-buttons end>
+        <button ion-button icon-only color="royal">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Dashboard</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only color="royal">
+          <ion-icon name="cart"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content class="bg-style">
+    <!-- <ion-card *ngFor="let user of users" (click)="onClick(user)"  style="background-color: white;">
+  
+        <ion-card-header>
+          <ion-card-title>{{user.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <img src="{{user.category_img}}" />
+        </ion-card-content>
+    </ion-card> -->
+
+    <ion-slides style="height: 50%; margin-top: -20px;width: 100%">
+        <ion-slide>
+            <img src="/assets/icon/burger.jpg" />        
+          </ion-slide>
+        <ion-slide>
+            <img src="/assets/icon/food1.jpg" />         
+          </ion-slide>
+        <ion-slide>
+            <img src="/assets/icon/jelly.jpg" /> 
+          </ion-slide>
+      </ion-slides>
+
+      <ion-grid>
+          <ion-row >
+            <ion-col *ngFor="let user of users ;let i = index"  (click)="onClick(user)"  col-6 >
+                <ion-card *ngIf="i < 2">
+                    <!-- <ion-card-header>
+                      <ion-card-title>{{user.name}}</ion-card-title>
+                    </ion-card-header> -->
+                  
+                    <!-- <ion-card-content>
+                      <img src="{{user.product_img}}" />
+                    </ion-card-content> -->
+                    <!-- <button ion-button (click)="showingProduct(user)" >SHow Details</button> -->
+                    <img class="image" src="{{user.category_img}}"  />
+                </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <img src="/assets/icon/spices-banner-2000x355.jpg" style="height: 100px; width: 100%;" />
+          </ion-row>
+          <ion-row >
+              <ion-col *ngFor="let user of continue "  (click)="onClick(user)"  col-6 >
+                  <ion-card >
+                      <!-- <ion-card-header>
+                        <ion-card-title>{{user.name}}</ion-card-title>
+                      </ion-card-header> -->
+                    
+                      <!-- <ion-card-content>
+                        <img src="{{user.product_img}}" />
+                      </ion-card-content> -->
+                      <!-- <button ion-button (click)="showingProduct(user)" >SHow Details</button> -->
+                      <img class="image" src="{{user.category_img}}"  />
+                  </ion-card>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+
+</ion-content>
